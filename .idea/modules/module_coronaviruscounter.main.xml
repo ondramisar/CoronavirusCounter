@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_coronaviruscounter.main" default="compile.module.coronaviruscounter.main">
+  <dirname property="module.coronaviruscounter.main.basedir" file="${ant.file.module_coronaviruscounter.main}"/>
+  
+  <property name="module.jdk.home.coronaviruscounter.main" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.coronaviruscounter.main" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.coronaviruscounter.main" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.coronaviruscounter.main" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="coronaviruscounter.main.output.dir" value="${module.coronaviruscounter.main.basedir}/../../build/classes/java/main"/>
+  <property name="coronaviruscounter.main.testoutput.dir" value="${module.coronaviruscounter.main.basedir}/../../build/classes/java/main"/>
+  
+  <path id="coronaviruscounter.main.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="coronaviruscounter.main.module.production.classpath">
+    <path refid="${module.jdk.classpath.coronaviruscounter.main}"/>
+    <path refid="library.gradle:_no.tornado:tornadofx:1.7.14.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.6.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-fxml:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-controls:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-controls:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-graphics:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-graphics:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-base:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-base:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.glassfish:javax.json:1.0.4.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+  </path>
+  
+  <path id="coronaviruscounter.main.runtime.production.module.classpath">
+    <pathelement location="${coronaviruscounter.main.output.dir}"/>
+    <path refid="library.gradle:_no.tornado:tornadofx:1.7.14.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.6.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-fxml:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-controls:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-controls:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-graphics:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-graphics:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-base:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-base:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.glassfish:javax.json:1.0.4.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+  </path>
+  
+  <path id="coronaviruscounter.main.module.classpath">
+    <path refid="${module.jdk.classpath.coronaviruscounter.main}"/>
+    <pathelement location="${coronaviruscounter.main.output.dir}"/>
+    <path refid="library.gradle:_no.tornado:tornadofx:1.7.14.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.6.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-fxml:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-controls:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-controls:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-graphics:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-graphics:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-base:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-base:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.glassfish:javax.json:1.0.4.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+  </path>
+  
+  <path id="coronaviruscounter.main.runtime.module.classpath">
+    <pathelement location="${coronaviruscounter.main.output.dir}"/>
+    <path refid="library.gradle:_no.tornado:tornadofx:1.7.14.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.6.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-fxml:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-controls:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-controls:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-graphics:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-graphics:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-base:win:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.openjfx:javafx-base:12.0.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.glassfish:javax.json:1.0.4.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.70.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.coronaviruscounter.main">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.coronaviruscounter.main">
+    <patternset refid="excluded.from.module.coronaviruscounter.main"/>
+  </patternset>
+  
+  <path id="coronaviruscounter.main.module.sourcepath">
+    <dirset dir="${module.coronaviruscounter.main.basedir}/../../src/main">
+      <include name="kotlin"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.coronaviruscounter.main" depends="compile.module.coronaviruscounter.main.production,compile.module.coronaviruscounter.main.tests" description="Compile module CoronavirusCounter.main"/>
+  
+  <target name="compile.module.coronaviruscounter.main.production" depends="register.custom.compilers" description="Compile module CoronavirusCounter.main; production classes">
+    <mkdir dir="${coronaviruscounter.main.output.dir}"/>
+    <javac2 destdir="${coronaviruscounter.main.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.coronaviruscounter.main}/javac">
+      <compilerarg line="${compiler.args.coronaviruscounter.main}"/>
+      <bootclasspath refid="coronaviruscounter.main.module.bootclasspath"/>
+      <classpath refid="coronaviruscounter.main.module.production.classpath"/>
+      <src refid="coronaviruscounter.main.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.coronaviruscounter.main"/>
+    </javac2>
+    
+    <copy todir="${coronaviruscounter.main.output.dir}">
+      <fileset dir="${module.coronaviruscounter.main.basedir}/../../src/main/kotlin">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.coronaviruscounter.main.basedir}/../../src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.coronaviruscounter.main.tests" depends="register.custom.compilers,compile.module.coronaviruscounter.main.production" description="compile module CoronavirusCounter.main; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.coronaviruscounter.main" description="cleanup module">
+    <delete dir="${coronaviruscounter.main.output.dir}"/>
+    <delete dir="${coronaviruscounter.main.testoutput.dir}"/>
+  </target>
+</project>

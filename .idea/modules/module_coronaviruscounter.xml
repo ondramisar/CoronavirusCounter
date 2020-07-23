@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_coronaviruscounter" default="compile.module.coronaviruscounter">
+  <dirname property="module.coronaviruscounter.basedir" file="${ant.file.module_coronaviruscounter}"/>
+  
+  <property name="module.jdk.home.coronaviruscounter" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.coronaviruscounter" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.coronaviruscounter" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.coronaviruscounter" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="coronaviruscounter.output.dir" value="${module.coronaviruscounter.basedir}/../../out/production/CoronavirusCounter"/>
+  <property name="coronaviruscounter.testoutput.dir" value="${module.coronaviruscounter.basedir}/../../out/test/CoronavirusCounter"/>
+  
+  <path id="coronaviruscounter.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="coronaviruscounter.module.production.classpath">
+    <path refid="${module.jdk.classpath.coronaviruscounter}"/>
+  </path>
+  
+  <path id="coronaviruscounter.runtime.production.module.classpath">
+    <pathelement location="${coronaviruscounter.output.dir}"/>
+  </path>
+  
+  <path id="coronaviruscounter.module.classpath">
+    <path refid="${module.jdk.classpath.coronaviruscounter}"/>
+    <pathelement location="${coronaviruscounter.output.dir}"/>
+  </path>
+  
+  <path id="coronaviruscounter.runtime.module.classpath">
+    <pathelement location="${coronaviruscounter.testoutput.dir}"/>
+    <pathelement location="${coronaviruscounter.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.coronaviruscounter">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.coronaviruscounter">
+    <patternset refid="excluded.from.module.coronaviruscounter"/>
+  </patternset>
+  
+  
+  <target name="compile.module.coronaviruscounter" depends="compile.module.coronaviruscounter.production,compile.module.coronaviruscounter.tests" description="Compile module CoronavirusCounter"/>
+  
+  <target name="compile.module.coronaviruscounter.production" depends="register.custom.compilers" description="Compile module CoronavirusCounter; production classes"/>
+  
+  <target name="compile.module.coronaviruscounter.tests" depends="register.custom.compilers,compile.module.coronaviruscounter.production" description="compile module CoronavirusCounter; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.coronaviruscounter" description="cleanup module">
+    <delete dir="${coronaviruscounter.output.dir}"/>
+    <delete dir="${coronaviruscounter.testoutput.dir}"/>
+  </target>
+</project>

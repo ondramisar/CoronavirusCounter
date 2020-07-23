@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CoronavirusCounter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CoronavirusCounter_jar</output-path>
+    <root id="archive" name="CoronavirusCounter.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/kotlin/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
