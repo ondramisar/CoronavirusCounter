@@ -6,12 +6,16 @@ import javax.json.JsonObject
 
 class ApiController : Controller() {
 
-    val api: Rest by inject()
+    private val api: Rest by inject()
 
     fun getCurrentStats(): CurrentStats =
-        api.get("all").one().toModel()
+        api.get(ALL).one().toModel()
 
     fun getHistory(): JsonObject =
-        api.get("historical/all?lastdays=220").one()
+        api.get(HISTORY).one()
 
+    companion object {
+        private const val HISTORY = "historical/all?lastdays=220"
+        private const val ALL = "all"
+    }
 }
